@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: 16px;
+  background-color: #fefefe;
+}
+header {
+  width: 100vw;
+  background-color: #464c50;
+  height: 3.5vh;
+  padding: 0.5rem;
+}
+.flex {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.space {
+  width: 90%;
+  justify-content: space-between;
+}
+nav ul {
+  list-style-type: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fefefe;
+  display: block;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+.linkProps {
+  color: #464c50;
+}
+.linkProps:active {
+  color: #0d0d0d;
+  border-bottom: 1px solid #af7051;
+}
+input {
+  border: 1px solid #bcbcbc;
+  height: 25px;
+  border-radius: 0.3rem;
+  padding: 0.2rem;
+}
+.profileDetails {
+  padding: 1.2rem;
+}
+.part1 {
+  width: 30%;
+}
+.part2 {
+  width: 65%;
+}
+.part2 input {
+  width: 85%;
+}
+section {
+  border-bottom: 1px solid #bcbcbc;
+  width: 86%;
+  margin: 1rem;
+}
