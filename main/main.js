@@ -1,6 +1,6 @@
 
 //get inputed search query 
-const user = document.querySelector('.userSearch').value;
+const user = document.querySelector('.userSearch');
 
 
 
@@ -12,19 +12,39 @@ import { graphql } from "https://cdn.skypack.dev/@octokit/graphql";
 //step 2: Request by providing the query we want ccalled, our Github access token and an authorization header with our token
 
 const query =`
-query GetMyInfo(querystring: "owner"){
-    search(owner: "Maryann-Agofure", type:REPOSITORY, first:10){  
-        repositoryCount
-        pageInfo{
-         endCursor
-         startCursor
+query($name: String!, $count:Int!) {
+    repositoryOwner(login: $name,){
+      id
+      login
+      avatarUrl
+      
+    
+      
+      repositories(first:$count){
+        nodes{
+          name
+          isFork
+          createdAt
+          pushedAt
+          descriptionHTML
         }
+      }
+    }
+    }
+`
+
+const queryVariables = `
+Query Variables {
+    "name": "Maryann-Agofure",
+    "count": 20
 }
 `
 
+ 
+
 // get access token and create header with tokentoken 
 
-const token = "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"
+const token = "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"
 const auth = {
     headers: {
         authorization: "token " + token
