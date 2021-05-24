@@ -5,15 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./main/main.js" type= "module"></script>
+    
     <title>Github Profile Page</title>
 </head>
 <body>
     <header class="flex">
-        <a href=""><span>gi</span></a>
-        <input type="text" name="text" placeholder="Search or jump to..." class="userSearch">
-        <button>/</button>
-    </input>
+        <a href=""><span><img src="./images/icons8-github-48.png" alt="github-logo"></span></a>
+        <div class="inputDiv">
+            <input type="text" name="text" placeholder="Search or jump to..." class="userSearch">
+            <button id="searchButton">/</button>
+        </div>
+        
+    
     
         
     <div class="flex space">
@@ -33,38 +36,44 @@
         </nav>  
     </div>
     </header>
-    <div class="flex profileDetails">
-        <div class="part1">
-            <a href=""><img src="" alt=""></a>
-            <h3>Ire Aderinokun</h3>
-            <p>Developer. Engineer</p>
+    <div class="renderInfo">
+        <nav>
+            <ul class="flex">
+                <li><a href="" class="linkProps"><span></span>Overview</a></li>
+                <li><a href="" class="linkProps"><span></span>Repositories<span>20</span></a></li>
+                <li><a href="" class="linkProps"><span></span>Projects</a></li>
+                <li><a href="" class="linkProps"><span></span>Packages</a></li>
+            </ul>
+        </nav>
+        <div class="flex profileDetails" >
+            <div class="part1">
+                <a href=""><img src="./images/IMG_0749.JPG" alt=""></a>
+                <h3>Ire Aderinokun</h3>
+                <p>Developer. Engineer</p>
+            </div>
+            <div class="part2">
+                
+                <input type="text" placeholder="Find a repository...">
+                <hr>
+                <p><strong>12</strong> results for <strong>public</strong> repositories</p>
+                <section>
+                    <div class="flex space">
+                        <h5>Name of repo</h5>
+                        <button><span></span>Star</button>
+                    </div>
+                    <div class="flex">
+                        
+                        <a href=""><span class="circle">HTML</span></a>
+                        <a href=""><span >22</span></a>
+                        <a href=""><span >2</span></a>
+                        <p>Updated on 2 May</p>
+    
+                    </div>
+                </section>
+            </div>
         </div>
-        <div class="part2">
-            <nav>
-                <ul class="flex">
-                    <li><a href="" class="linkProps"><span></span>Overview</a></li>
-                    <li><a href="" class="linkProps"><span></span>Repositories</a></li>
-                    <li><a href="" class="linkProps"><span></span>Projects</a></li>
-                    <li><a href="" class="linkProps"><span></span>Packages</a></li>
-                </ul>
-            </nav>
-            <input type="text" placeholder="Find a repository...">
-            <p>12 results for public repositories</p>
-            <section>
-                <div class="flex space">
-                    <h5>Name of repo</h5>
-                    <button><span></span>Star</button>
-                </div>
-                <div class="flex">
-                    
-                    <a href=""><span class="circle">HTML</span></a>
-                    <a href=""><span >22</span></a>
-                    <a href=""><span >2</span></a>
-                    <p>Updated on 2 May</p>
-
-                </div>
-            </section>
-        </div>
+        
     </div>
+    <script src="./main/main.js" type= "module"></script>
 </body>
 </html>
