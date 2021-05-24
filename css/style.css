@@ -97,11 +97,7 @@ nav ul li a {
 
   margin: 1rem 0.1rem;
 }
-section {
-  border-bottom: 1px solid #bcbcbc;
-  width: 86%;
-  margin: 1rem;
-}
+
 span img {
   width: 40px;
   height: 40px;
@@ -158,4 +154,59 @@ span img {
   font-size: 1rem;
 
   color: #24292f;
+}
+span i {
+  color: #fbfbfb;
+  padding: 0 0.5rem;
+}
+span button i {
+  color: #464c50;
+}
+.inline {
+  display: inline-flex;
+
+  flex-flow: row nowrap;
+  text-align: center;
+}
+.linkProps span img {
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.features i {
+  color: #0d0d0d;
+}
+.space h3 {
+  margin: 0.2rem 0;
+  text-align: left;
+
+  color: #468ce0;
+  font-size: 1.3rem;
+}
+section {
+  border-bottom: 1px solid #bcbcbc;
+  width: 86%;
+  padding: 0.7rem 0;
+  margin: 0.5rem 0;
+}
+.repoFeatures {
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.7rem 0;
+}
+.repoFeatures a {
+  text-decoration: none;
+  display: block;
+  padding: 0.4rem 0;
+  width: 10%;
+}
+.repoFeatures p {
+  border: none;
+  padding: 0.3rem 0.4rem;
+}
+.space > span button,
+.space > span i {
+  padding: 0.2rem 0.5rem;
+  text-align: center;
 }
