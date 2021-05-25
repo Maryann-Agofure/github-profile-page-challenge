@@ -36,6 +36,8 @@ nav ul li a {
 }
 .linkProps {
   color: #464c50;
+  align-items: center;
+  justify-content: center;
 }
 .linkProps:active {
   color: #0d0d0d;
@@ -82,7 +84,6 @@ nav ul li a {
 .part2 {
   width: 73%;
   height: 75vh;
-  padding: 0.5rem;
 }
 
 .part2 input {
@@ -95,7 +96,7 @@ nav ul li a {
 .part2 > hr {
   width: 87%;
 
-  margin: 1rem 0.1rem;
+  margin: 0.6rem 0.1rem;
 }
 
 span img {
@@ -126,15 +127,14 @@ span img {
 .renderInfo nav ul {
   align-items: center;
   justify-content: center;
-  padding-top: 1rem;
+  padding-top: 0.4rem;
   width: 100vw;
-  border-bottom: 1px solid #bcbcbc;
 }
 .renderInfo nav ul a,
 .part2 p {
-  padding: 0.5rem;
-  color: #0e0e0e;
-  margin: 0.5rem;
+  padding: 0.3rem 1rem;
+  color: #0d0d0d;
+  margin: 0.5rem 0.9rem;
   font-size: 1rem;
 }
 .part2 p {
@@ -146,9 +146,9 @@ span img {
 .part1 h3 {
   text-align: left;
   font-size: 1.5rem;
-
+  display: block;
+  padding-top: 6rem;
   color: #24292f;
-  padding-top: 2.5rem;
 }
 .part1 p {
   font-size: 1rem;
@@ -169,8 +169,9 @@ span button i {
   text-align: center;
 }
 .linkProps span img {
-  width: 20px;
+  width: 22px;
   height: 20px;
+  padding: 0.2rem 0.3rem;
   align-items: center;
   justify-content: center;
 }
@@ -199,14 +200,17 @@ section {
   text-decoration: none;
   display: block;
   padding: 0.4rem 0;
-  width: 10%;
+  width: 12%;
 }
 .repoFeatures p {
   border: none;
-  padding: 0.3rem 0.4rem;
+  padding: 0.3rem 0.2rem;
 }
 .space > span button,
 .space > span i {
   padding: 0.2rem 0.5rem;
   text-align: center;
+}
+.rightNavigation {
+  margin-right: 1.5rem;
 }
