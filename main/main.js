@@ -1,6 +1,7 @@
 let user = document.querySelector('.userSearch');
 const userSearchButton = document.getElementById('searchButton')
 let myData = document.querySelector('.getMyData')
+const token = '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';
 
 
 
@@ -57,7 +58,7 @@ variables: `{
     headers: {
       'Content-Type': 'application/json',
       'Content-Length': content.length,
-      Authorization: "token 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"
+      Authorization: "token " + token,
     }}) ;
 
  const data = await response.json()
@@ -69,11 +70,11 @@ let profileInfo = data.repositoryOwner
 const userProfileDetails = document.querySelector('.profileDetails')
 userProfileDetails.innerHTML = '';
 
-data.map(user => {
+content.repositoryOwner.map(data => {
   const userDetails = document.createElement('div')
   userDetails.innerHTML = `<div class= "part1>
-   <a href=''><img src = '${user.avatarUrl}' alt= "useravatar"></a>
-   <h3>${user.login}</h3>
+   <a href=''><img src = '${data.avatarUrl}' alt= "useravatar"></a>
+   <h3>${data.login}</h3>
   </div>`
   userProfileDetails.appendChild(userDetails)
 })
