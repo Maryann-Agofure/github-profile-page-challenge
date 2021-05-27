@@ -57,20 +57,30 @@ variables: `{
     headers: {
       'Content-Type': 'application/json',
       'Content-Length': content.length,
-      Authorization: "token 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"
+      Authorization: "token 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"
     }}) ;
 
- const repoReport = await response.json()
- myData.innerHTML = (JSON.stringify(repoReport)
+ const data = await response.json()
+ myData.innerHTML = (JSON.stringify(data)
 );
 
-let profileInfo = repoReport.data.repositoryOwner
+let profileInfo = data.repositoryOwner
 
-console.log(profileInfo)
+const userProfileDetails = document.querySelector('.profileDetails')
+userProfileDetails.innerHTML = '';
+
+data.map(user => {
+  const userDetails = document.createElement('div')
+  userDetails.innerHTML = `<div class= "part1>
+   <a href=''><img src = '${user.avatarUrl}' alt= "useravatar"></a>
+   <h3>${user.login}</h3>
+  </div>`
+  userProfileDetails.appendChild(userDetails)
+})
 
 }
 
-getRepoData();
+
 
 
 
