@@ -18,7 +18,7 @@ async function getRepoData() {
 let content = JSON.stringify({
   'query':
   `
-    query getRepositories($name: String!, $count:Int= 12, $withFork: Boolean=true, $withStar: Boolean=true) {
+   query getRepositories($name: String!, $count:Int= 12, $withFork: Boolean=true, $withStar: Boolean=true) {
     repositoryOwner(login: $name){
       avatarUrl
       id
@@ -65,21 +65,32 @@ variables: `{
  myData.innerHTML = (JSON.stringify(data)
 );
 
-let profileInfo = data.repositoryOwner
+
 
 const userProfileDetails = document.querySelector('.profileDetails')
 userProfileDetails.innerHTML = '';
 
-content.repositoryOwner.map(data => {
+data.forEach(element => {
+  
+});(data => {
   const userDetails = document.createElement('div')
   userDetails.innerHTML = `<div class= "part1>
-   <a href=''><img src = '${data.avatarUrl}' alt= "useravatar"></a>
+   <img src="${data.avatarUrl}">
    <h3>${data.login}</h3>
   </div>`
   userProfileDetails.appendChild(userDetails)
 })
 
 }
+const menuButton = document.getElementById('bar-menu')
+const dropdown = document.getElementsByClassName('dropdown-menu')
+
+function toggleMenu(){
+menuButton.addEventListener('click', () =>{
+dropdown.style.display = "block"
+})
+}
+toggleMenu()
 
 
 

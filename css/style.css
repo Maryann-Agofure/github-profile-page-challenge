@@ -6,6 +6,7 @@ body {
   font-size: 16px;
   background-color: #fefefe;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 header {
   width: 100vw;
@@ -23,6 +24,11 @@ header {
   width: 90%;
   justify-content: space-between;
 }
+.space-out {
+  justify-content: space-between;
+  align-items: center;
+}
+
 nav ul {
   margin: 0 0.8rem;
   list-style-type: none;
@@ -211,6 +217,71 @@ section {
   padding: 0.2rem 0.5rem;
   text-align: center;
 }
-.rightNavigation {
-  margin-right: 1.5rem;
+.responsive-bar {
+  display: none;
+}
+.dropdown-menu {
+  flex-flow: column nowrap;
+  display: none;
+  position: absolute;
+  background-color: #24292f;
+  min-width: 160px;
+  height: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+@media screen and (max-width: 790px) {
+  header nav {
+    display: none;
+  }
+  .inputDiv {
+    width: 95%;
+    display: none;
+  }
+  .profileDetails {
+    flex-flow: column nowrap;
+    height: auto;
+  }
+  .part1 {
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+
+    text-align: left;
+  }
+  .profileDetails .part1 img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .part2 {
+    width: 100vw;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+  }
+  .part2 input {
+    width: 85%;
+  }
+
+  .rightNavigation a i:not(.only-display) {
+    display: none;
+  }
+  .rightNavigation a img {
+    display: none;
+  }
+  .responsive-header {
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .responsive-bar {
+    display: block;
+  }
+  .menu-bar-github-icon {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 80%;
+  }
 }

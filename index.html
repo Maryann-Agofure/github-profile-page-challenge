@@ -10,129 +10,175 @@
     <title>Github Profile Page</title>
   </head>
   <body>
-    <header class="flex">
-      <a href=""
-        ><span
-          ><img src="./images/icons8-github-48.png" alt="github-logo" /></span
-      ></a>
-      <div class="inputDiv">
-        <input
-          type="text"
-          name="text"
-          placeholder="Search or jump to..."
-          class="userSearch"
-        />
-        <button id="searchButton">/</button>
-      </div>
+    <div>
+      <header class="flex responsive-header">
+        <div class="flex menu-bar-github-icon">
+          <a href="" class="responsive-bar" id="bar-menu"
+            ><span><i class="fa fa-bars"></i></span
+          ></a>
+          <a href=""
+            ><span
+              ><img
+                src="./images/icons8-github-48.png"
+                alt="github-logo" /></span
+          ></a>
+        </div>
+        <div class="inputDiv">
+          <input
+            type="text"
+            name="text"
+            placeholder="Search or jump to..."
+            class="userSearch"
+          />
+          <button id="searchButton">/</button>
+        </div>
 
-      <div class="flex space">
+        <div class="flex space">
+          <nav>
+            <ul class="flex">
+              <li class="hidden"><a href="">Dashboard</a></li>
+              <li><a href="">Pull requests</a></li>
+              <li><a href="">Issues</a></li>
+              
+              <li><a href="">Marketplace</a></li>
+              <li><a href="">Explore</a></li>
+              
+            </ul>
+          </nav>
+          <nav class="flex rightNavigation">
+            <a href=""
+              ><span><i class="far fa-bell only-display"></i></span
+            ></a>
+            <a href=""
+              ><span
+                ><i class="fa fa-plus"></i
+                ><i class="fas fa-chevron-circle-down"></i> </span
+            ></a>
+            <a href=""
+              ><span
+                ><img src="./images/IMG_0749.JPG" alt="" /><i
+                  class="fas fa-chevron-circle-down"
+                ></i></span
+            ></a>
+          </nav>
+        </div>
+      </header>
+      <div class="renderInfo">
         <nav>
           <ul class="flex">
+            <li>
+              <a href="" class="linkProps flex"
+                ><span class="inline"
+                  ><img
+                    src="./images/icons8-open-book-30.png"
+                    alt="overview" /></span
+                >Overview</a
+              >
+            </li>
+            <li>
+              <a href="" class="linkProps flex"
+                ><span class="inline"
+                  ><img
+                    src="./images/icons8-repository-80.png"
+                    alt="Repository" /></span
+                >Repositories<span>20</span></a
+              >
+            </li>
+            <li>
+              <a href="" class="linkProps flex"
+                ><span class="inline"
+                  ><img src="./images/icons8-view-quilt-50.png" alt="" /></span
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a href="" class="linkProps flex"
+                ><span class="inline"
+                  ><img src="./images/icons8-box-64 (1).png" alt="" /></span
+                >Packages</a
+              >
+            </li>
+          </ul>
+          <hr />
+        </nav>
+        <div class="flex profileDetails">
+          <div class="part1">
+            <a href=""><img src="./images/IMG_0749.JPG" alt="" /></a>
+            <div>
+              <h3>Ann Marie</h3>
+              <p>Developer. Curious</p>
+            </div>
+          </div>
+          <div class="part2">
+            <input type="text" placeholder="Find a repository..." />
+            <hr />
+            <p>
+              <strong>12</strong> results for
+              <strong>public</strong> repositories
+            </p>
+            <section>
+              <div class="flex space">
+                <div class="flex space-out">
+                  <h3>Hapee-Ng</h3>
+
+                  <span
+                    ><button><i class="far fa-star"></i>Star</button></span
+                  >
+                </div>
+
+                <p>About this repo</p>
+              </div>
+              <div class="flex repoFeatures">
+                <a href=""
+                  ><span class="features"
+                    ><i class="fas fa-circle"></i>HTML</span
+                  ></a
+                >
+                <a href=""
+                  ><span class="features"
+                    ><i class="far fa-star"></i>22</span
+                  ></a
+                >
+                <a href=""
+                  ><span class="features"
+                    ><i class="fas fa-code-branch"></i>22</span
+                  ></a
+                >
+                <p class="features">Updated on 2 May</p>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="dropdown-menu flex">
+          <div class="inputDiv">
+            <input
+              type="text"
+              name="text"
+              placeholder="Search or jump to..."
+              class="userSearch"
+            />
+            <button id="searchButton">/</button>
+          </div>
+          <nav>
+          <ul class="flex">
+            <li class="hidden"><a href="">Dashboard</a></li>
             <li><a href="">Pull requests</a></li>
             <li><a href="">Issues</a></li>
-            <li><a href="">Codespaces</a></li>
+            
             <li><a href="">Marketplace</a></li>
             <li><a href="">Explore</a></li>
+            <li><a href="">Codespaces</a></li>
+            <li><a href="">sponsors</a></li>
+            <li><a href="">Codespaces</a></li>
+            <li><a href=""><img src="./images/IMG_0749.JPG" alt="">Login</a></li>
+            <li><a href=""><i class="class="far fa-sign-out">Sign-out</i></a></li>
+            
           </ul>
-        </nav>
-        <nav class="flex rightNavigation">
-          <a href=""
-            ><span><i class="far fa-bell"></i></span
-          ></a>
-          <a href=""
-            ><span
-              ><i class="fa fa-plus"></i
-              ><i class="fas fa-chevron-circle-down"></i> </span
-          ></a>
-          <a href=""
-            ><span
-              ><img src="./images/IMG_0749.JPG" alt="" /><i
-                class="fas fa-chevron-circle-down"
-              ></i></span
-          ></a>
-        </nav>
+        </nav></div>
+        <p class="getMyData"></p>
       </div>
-    </header>
-    <div class="renderInfo">
-      <nav>
-        <ul class="flex">
-          <li>
-            <a href="" class="linkProps flex"
-              ><span class="inline"
-                ><img
-                  src="./images/icons8-open-book-30.png"
-                  alt="overview" /></span
-              >Overview</a
-            >
-          </li>
-          <li>
-            <a href="" class="linkProps flex"
-              ><span class="inline"
-                ><img
-                  src="./images/icons8-repository-80.png"
-                  alt="Repository" /></span
-              >Repositories<span>20</span></a
-            >
-          </li>
-          <li>
-            <a href="" class="linkProps flex"
-              ><span class="inline"
-                ><img src="./images/icons8-view-quilt-50.png" alt="" /></span
-              >Projects</a
-            >
-          </li>
-          <li>
-            <a href="" class="linkProps flex"
-              ><span class="inline"
-                ><img src="./images/icons8-box-64 (1).png" alt="" /></span
-              >Packages</a
-            >
-          </li>
-        </ul>
-        <hr />
-      </nav>
-      <div class="flex profileDetails">
-        <div class="part1">
-          <a href=""><img src="./images/IMG_0749.JPG" alt="" /></a>
-          <h3>Ann Marie</h3>
-          <p>Developer. Curious</p>
-        </div>
-        <div class="part2">
-          <input type="text" placeholder="Find a repository..." />
-          <hr />
-          <p>
-            <strong>12</strong> results for <strong>public</strong> repositories
-          </p>
-          <section>
-            <div class="flex space">
-              <h3>Hapeeee-Ng</h3>
-              <p>About this repo</p>
-              <span
-                ><button><i class="far fa-star"></i>Star</button></span
-              >
-            </div>
-            <div class="flex repoFeatures">
-              <a href=""
-                ><span class="features"
-                  ><i class="fas fa-circle"></i>HTML</span
-                ></a
-              >
-              <a href=""
-                ><span class="features"><i class="far fa-star"></i>22</span></a
-              >
-              <a href=""
-                ><span class="features"
-                  ><i class="fas fa-code-branch"></i>22</span
-                ></a
-              >
-              <p class="features">Updated on 2 May</p>
-            </div>
-          </section>
-        </div>
-      </div>
-      <p class="getMyData"></p>
-    </div>
 
-    <script src="./main/main.js" type="module"></script>
+      <script src="./main/main.js" type="module"></script>
+    </div>
   </body>
 </html>
