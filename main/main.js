@@ -1,7 +1,7 @@
 let user = document.querySelector('.userSearch');
 const userSearchButton = document.getElementById('searchButton')
 let myData = document.querySelector('.getMyData')
-const token = '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';
+const token = '{secrets.ACCESSTOKEN}';
 
 
 
@@ -25,6 +25,7 @@ let content = JSON.stringify({
       login
       
       repositories(first:$count ){
+        totalCount
         nodes{
           name
           description
@@ -62,107 +63,62 @@ variables: `{
     }}) ;
 
  const data = await response.json()
- myData.innerHTML = (JSON.stringify(data)
-);
-
-
-
-const userProfileDetails = document.querySelector('.profileDetails')
-userProfileDetails.innerHTML = '';
-
-data.forEach(element => {
+ 
+const {repositoryOwner} = data.data
+const repoList = repositoryOwner.repositories.nodes
+console.log(repoList)
   
-});(data => {
+
+const userProfileDetails = document.querySelector('.part2')
+
+document.querySelector('.photo').src =` ${repositoryOwner.avatarUrl}`
+document.querySelector('.login-name').innerHTML =` ${repositoryOwner.login}`
+document.querySelector('.repositoryCount').innerHTML = ` ${repositoryOwner.repositories.totalCount}` 
+
+
+repoList.forEach(nodes => {
   const userDetails = document.createElement('div')
-  userDetails.innerHTML = `<div class= "part1>
-   <img src="${data.avatarUrl}">
-   <h3>${data.login}</h3>
+  userDetails.innerHTML = `<div class= "repositoryList">
+   <div class= "flex-column">
+   <h3>${nodes.name}</h3>
+   <span class= "star-button"
+                    ><button><i class="far fa-star"></i>Star</button></span
+                  >
+                </div>
+   
+   
+   <p>${nodes.description}</p>
+   <div class="others">
+  <span class="features">
+                    <i class="fas fa-circle"  style = 'color: ${nodes.primaryLanguage.color}' ></i>${nodes.primaryLanguage.name}</span
+                  >
+                
+               <span class="features"
+                  ><i class="far fa-star"></i>${nodes.stargazerCount}</span
+                >  
+              <span class="features"
+                    ><i class="fas fa-code-branch"></i>${nodes.forkCount}</span
+                  > 
+                <p class="features">Updated at ${nodes.updatedAt}</p>        
+   </div>
+  
+  
+   
+   
   </div>`
   userProfileDetails.appendChild(userDetails)
 })
 
 }
+
+/*
 const menuButton = document.getElementById('bar-menu')
 const dropdown = document.getElementsByClassName('dropdown-menu')
 
 function toggleMenu(){
 menuButton.addEventListener('click', () =>{
-dropdown.style.display = "block"
+dropdown.classList.toggle('show')
 })
 }
 toggleMenu()
-
-
-
-
-
-// step by step 
-//step 1: import js module to enable us make GraphQL queries in javascript
-//import { graphql } from "https://cdn.skypack.dev/@octokit/graphql";
-
-//step 2: Request by providing the query we want ccalled, our Github access token and an authorization header with our token
-
-
-
-
- 
-
-// get access token and create header with tokentoken 
-
-/*query:
-   `
-    ($name: String= ${user.value}, $count:Int= 12, $withFork: Boolean=true, $withStar: Boolean=true) {
-    repositoryOwner(login: $name,){
-      avatarUrl
-      id
-      login
-      
-      repositories(first:$count ){
-        nodes{
-          name
-          description
-          
-          primaryLanguage{
-            color
-            name
-          }
-          stargazerCount@include(if: $withStar)
-          forkCount@include(if: $withFork)
-          updatedAt
-          
-        }
-      }
-    }
-    }
-  }
-`
-    }
-}
-
-*/
-
-/*getRepositories($name: String= "Maryann-Agofure", $count:Int= 12, $withFork: Boolean=true, $withStar: Boolean=true) {
-  repositoryOwner(login: $name,){
-    avatarUrl
-    id
-    login
-    
-    repositories(first:$count ){
-      nodes{
-        name
-        description
-        
-        primaryLanguage{
-          color
-          name
-        }
-        stargazerCount@include(if: $withStar)
-        forkCount@include(if: $withFork)
-        updatedAt
-        
-      }
-    }
-  
-  }
-}
 */
