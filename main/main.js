@@ -1,7 +1,7 @@
 let user = document.querySelector('.userSearch');
 const userSearchButton = document.getElementById('searchButton')
 let myData = document.querySelector('.getMyData')
-const token = '{secrets.ACCESSTOKEN}';
+const {token} = process.env
 
 
 
@@ -59,7 +59,7 @@ variables: `{
     headers: {
       'Content-Type': 'application/json',
       'Content-Length': content.length,
-      Authorization: "token " + token,
+      'Authorization': `${token}` + 'token'
     }}) ;
 
  const data = await response.json()
